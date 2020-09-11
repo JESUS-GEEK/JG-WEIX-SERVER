@@ -51,9 +51,9 @@
             <property name="useJSR310Types" value="true"/>
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.qiguliuxing.dts.db.domain" targetProject="src/main/java"/>
-        <sqlMapGenerator targetPackage="com.qiguliuxing.dts.db.dao" targetProject="src/main/resources"/>
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.qiguliuxing.dts.db.dao"
+        <javaModelGenerator targetPackage="com.jg.wx.domain" targetProject="src/main/java"/>
+        <sqlMapGenerator targetPackage="com.jg.wx.dao" targetProject="src/main/resources"/>
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.jg.wx.dao"
                              targetProject="src/main/java"/>
         <!--demo库-->
         <table tableName="dts_about_me" domainObjectName="DtsAboutMe"
