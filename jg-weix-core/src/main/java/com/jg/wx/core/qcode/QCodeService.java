@@ -3,7 +3,7 @@ package com.jg.wx.core.qcode;
 import cn.binarywang.wx.miniapp.api.WxMaService;
 import com.jg.wx.core.storage.StorageService;
 import com.jg.wx.core.system.SystemConfig;
-import com.jg.wx.db.domain.DtsGroupon;
+import com.jg.wx.domain.DtsGroupon;
 import me.chanjar.weixin.common.error.WxErrorException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

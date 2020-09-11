@@ -1,8 +1,8 @@
 package com.jg.wx.core.storage;
 
 import com.jg.wx.core.util.CharUtil;
-import com.jg.wx.db.domain.DtsStorage;
-import com.jg.wx.db.service.DtsStorageService;
+import com.jg.wx.domain.DtsStorage;
+import com.jg.wx.service.DtsStorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 
