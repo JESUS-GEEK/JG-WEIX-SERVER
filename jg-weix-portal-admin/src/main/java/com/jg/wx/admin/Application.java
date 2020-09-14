@@ -9,12 +9,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 /**
  * 服务启动类
  *
- * @author CHENBO
- * @QQ:623659388
+ * @author JinPu.shi
  */
 @SpringBootApplication(scanBasePackages = {"com.jg.wx", "com.jg.wx.core",
         "com.jg.wx.admin"})
-@MapperScan({ "com.qiguliuxing.dts.db.dao", "com.qiguliuxing.dts.db.dao.ex" })
+@MapperScan({ "com.jg.wx.dao", "com.jg.wx.dao.ex" })
 @EnableTransactionManagement
 @EnableScheduling
 public class Application {
