@@ -219,7 +219,6 @@ public class WxAuthController {
                 return ResponseUtil.updatedDataFailed();
             }
         }
-
         // token
         UserToken userToken = null;
         try {
@@ -227,12 +226,12 @@ public class WxAuthController {
         }
         catch (Exception e) {
             logger.error("微信登录失败,生成token失败：{}", user.getId());
-            e.printStackTrace();
+            logger.error("失败原因:{}", e.getMessage());
             return ResponseUtil.fail();
         }
         userToken.setSessionKey(sessionKey);
 
-        Map<Object, Object> result = new HashMap<Object, Object>(16);
+        Map<Object, Object> result = new HashMap<>(16);
         result.put("openId", openId);
         result.put("token", userToken.getToken());
         result.put("tokenExpire", userToken.getExpireTime().toString());
