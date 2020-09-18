@@ -5,8 +5,9 @@
 # 荣誉墙
 
 - [@syvia](https://github.com/yuwangjuan)
-- [@Jimmy.Shen](https://github.com/threeleafDreaming)
+- [@tarkuni](https://github.com/tarkuni)
 - [@JinPu Shi](https://github.com/Shkin1)
+- [@Jimmy.Shen](https://github.com/threeleafDreaming)
 
 # 模块功能
 - jg-weix-portal-admin
