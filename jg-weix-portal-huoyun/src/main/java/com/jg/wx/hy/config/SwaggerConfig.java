@@ -16,7 +16,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @Configuration
 @EnableSwagger2
-//@ComponentScan(basePackages="com.jg.wx.hy.controller")
 public class SwaggerConfig {
 
     @Bean
