@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * <p>Title: Application</p>
- * <p>Company:浩鲸云计算科技股份有限公司 </p>
+ * <p>Company: </p>
  * <p>Description:
  * 描述：
  * </p>
@@ -22,8 +22,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @MapperScan({"com.jg.wx.dao", "com.jg.wx.dao.ex"})
 @EnableTransactionManagement
 @EnableScheduling
-public class Application {
+public class HyApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(HyApplication.class, args);
     }
 }

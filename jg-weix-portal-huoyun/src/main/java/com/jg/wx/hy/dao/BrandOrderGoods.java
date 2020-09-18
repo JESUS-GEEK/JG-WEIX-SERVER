@@ -1,6 +1,7 @@
 package com.jg.wx.hy.dao;
 
-import com.qiguliuxing.dts.db.domain.DtsOrderGoods;
+
+import com.jg.wx.domain.DtsOrderGoods;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

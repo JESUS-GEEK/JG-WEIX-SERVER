@@ -56,7 +56,7 @@ import static com.jg.wx.hy.util.WxResponseCode.AUTH_OPENID_UNACCESS;
 
 /**
  * <p>Title: WxAuthController</p>
- * <p>Company:浩鲸云计算科技股份有限公司 </p>
+ * <p>Company: </p>
  * <p>Description:
  * 描述：鉴权服务
  * </p>
