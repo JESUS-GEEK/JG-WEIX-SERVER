@@ -25,6 +25,7 @@ import com.jg.wx.hy.util.IpUtil;
 import com.jg.wx.hy.util.WxResponseUtil;
 import com.jg.wx.service.CouponAssignService;
 import com.jg.wx.service.DtsUserService;
+import io.swagger.annotations.Api;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
@@ -68,6 +69,7 @@ import static com.jg.wx.hy.util.WxResponseCode.AUTH_OPENID_UNACCESS;
 @RestController
 @RequestMapping("/wx/auth")
 @Validated
+@Api(value = "鉴权-登陆注册", tags = {"鉴权-登陆注册"})
 public class WxAuthController {
     private static final Logger logger = LoggerFactory.getLogger(WxAuthController.class);
 

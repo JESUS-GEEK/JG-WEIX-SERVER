@@ -4,11 +4,12 @@ import com.jg.wx.core.util.ResponseUtil;
 import com.jg.wx.domain.JgOdFee;
 import com.jg.wx.hy.util.GeoUtil;
 import com.jg.wx.service.JgOdFeeService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -27,6 +28,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping(value = "/api/fee/")
+@Api(value = "费用", tags = {"费用"})
 public class WxFeeController {
 
     @Resource
@@ -45,6 +47,7 @@ public class WxFeeController {
      * @return odFee
      */
     @GetMapping("getOdFee")
+    @ApiOperation(value = "od按车型,距离计算费用", notes = "费用计算-经纬度")
     public Object getOdFee(double lng1, double lat1, double lng2, double lat2, int catType) {
         try {
             double distance = GeoUtil.getDistance(lng1, lat1, lng2, lat2);
@@ -60,6 +63,7 @@ public class WxFeeController {
     }
 
     @GetMapping("getCatFee")
+    @ApiOperation(value = "车信息费用", notes = "指定车信息费用")
     public Object getCatFee(int catType) {
         try {
             JgOdFee jgOdFee = jgOdFeeService.selectByType(catType);
@@ -73,6 +77,7 @@ public class WxFeeController {
 
 
     @GetMapping("getAllCarInfo")
+    @ApiOperation(value = "所有车信息", notes = "车-信息")
     public Object getAllCarInfo() {
         try {
             List<Map<String, Object>> maps = jgOdFeeService.selectCarDim();

@@ -56,7 +56,7 @@
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.jg.wx.dao"
                              targetProject="src/main/java"/>
         <!--demo库-->
-        <table tableName="jg_hy_od_fee" domainObjectName="JgOdFee"
+        <table tableName="jg_hy_bus_order" domainObjectName="JgBusOrder"
                enableInsert="true"
                enableUpdateByPrimaryKey="true"
                enableDeleteByPrimaryKey="true"

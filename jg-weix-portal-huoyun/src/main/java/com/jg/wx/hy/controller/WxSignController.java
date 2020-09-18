@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.jg.wx.core.util.ResponseUtil;
 import com.jg.wx.domain.DtsSign;
 import com.jg.wx.service.DtsSignService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +27,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/wx/sign")
+@Api(value = "签到", tags = {"签到"})
 public class WxSignController {
 
     private DtsSignService dtsSignService;
