@@ -11,15 +11,15 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  *
  * @author JinPu.shi
  */
-@SpringBootApplication(scanBasePackages = {"com.jg.wx", "com.jg.wx.core",
+@SpringBootApplication(scanBasePackages = {"com.jg.wx.dao", "com.jg.wx", "com.jg.wx.core",
         "com.jg.wx.admin"})
-@MapperScan({ "com.jg.wx.dao", "com.jg.wx.dao.ex" })
+@MapperScan({"com.jg.wx.dao", "com.jg.wx.dao.ex"})
 @EnableTransactionManagement
 @EnableScheduling
 public class Application {
 
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
 
 }
