@@ -11,10 +11,12 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+/**
+ * @author shi.jp
+ */
 @Configuration
-@EnableWebMvc
 @EnableSwagger2
-@ComponentScan(basePackages="com.jg.wx.hy.controller")
+//@ComponentScan(basePackages="com.jg.wx.hy.controller")
 public class SwaggerConfig {
 
     @Bean
@@ -22,7 +24,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(this.apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.jg.wx.hy.controller"))
+                .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -34,7 +36,7 @@ public class SwaggerConfig {
                 "小程序接口文档",
                 "小程序接口文档",
                 "1.0",
-                "urn:tos",
+                "http://127.0.0.1:8070/jg/hy/swagger-ui.html",
                 "JESUS-GEEK-HY",
                 "Apache 2.0",
                 "http://www.apache.org/licenses/LICENSE-2.0");
