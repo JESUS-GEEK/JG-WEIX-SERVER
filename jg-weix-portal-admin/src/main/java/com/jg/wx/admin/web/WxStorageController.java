@@ -6,6 +6,7 @@ import com.jg.wx.core.util.CharUtil;
 import com.jg.wx.core.util.ResponseUtil;
 import com.jg.wx.domain.DtsStorage;
 import com.jg.wx.service.DtsStorageService;
+import io.swagger.annotations.Api;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/wx/storage")
 @Validated
+@Api(value = "存储-上传与下载", tags = {"存储-上传与下载"})
 public class WxStorageController {
 	private static final Logger logger = LoggerFactory.getLogger(WxStorageController.class);
 
@@ -72,7 +74,7 @@ public class WxStorageController {
 		String url = storageService.store(file.getInputStream(), file.getSize(), file.getContentType(),
 				originalFilename);
 
-		Map<String, Object> data = new HashMap<>();
+		Map<String, Object> data = new HashMap<>(16);
 		data.put("url", url);
 
 		logger.info("【请求结束】上传文件,响应结果:{}", JSONObject.toJSONString(data));
